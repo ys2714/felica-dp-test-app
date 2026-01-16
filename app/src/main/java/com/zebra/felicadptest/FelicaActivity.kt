@@ -57,6 +57,7 @@ class FelicaActivity : ZebraBaseComponentActivity() {
         Column(modifier = Modifier
             .background(Color.Black)
             .fillMaxSize()
+            .padding(vertical = 50.dp)
         ) {
             Text(text = "Coding Polarity: ${viewModel.codingPolarityText.value}", color = Color.White)
             Text(text = "Command Type: ${viewModel.commandTypeText.value}", color = Color.White)
@@ -66,13 +67,13 @@ class FelicaActivity : ZebraBaseComponentActivity() {
             Text(text = "Response: ${viewModel.responseText.value}", color = Color.White)
             Row(modifier = Modifier.fillMaxWidth()) {
                 CodingButton("Keep") {
-                    viewModel.setCodingPolarity(FelicaService.CodingPolarity.Keep)
+                    // viewModel.setCommandType(FelicaService.CodingPolarity.Keep)
                 }
                 CodingButton("+ Coding") {
-                    viewModel.setCodingPolarity(FelicaService.CodingPolarity.Positive)
+                    viewModel.setCommandType(FelicaService.CommandType.Positive)
                 }
                 CodingButton("- Coding") {
-                    viewModel.setCodingPolarity(FelicaService.CodingPolarity.Negative)
+                    viewModel.setCommandType(FelicaService.CommandType.Negative)
                 }
             }
             Row(modifier = Modifier.fillMaxWidth()) {
