@@ -1,4 +1,4 @@
-package com.zebra.felicadptest
+package com.zebra.znfc_helper.felica
 
 object FelicaResponse {
 

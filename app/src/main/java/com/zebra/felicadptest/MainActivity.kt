@@ -47,8 +47,9 @@ class MainActivity : ZebraBaseComponentActivity() {
                 val intent = Intent(context, FelicaActivity::class.java)
                 startActivity(context, intent, null)
             }
-            MenuButton("Polling") {
-
+            MenuButton("JP Driver License") {
+                val intent = Intent(context, JPDLActivity::class.java)
+                startActivity(context, intent, null)
             }
         }
     }

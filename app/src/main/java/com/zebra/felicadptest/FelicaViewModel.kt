@@ -7,6 +7,8 @@ import android.content.Intent
 import android.widget.Toast
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
+import com.zebra.znfc_helper.felica.FelicaService
+import com.zebra.znfc_helper.felica.toHexString
 
 /*
 * <uses-permission android:name="android.permission.NFC" />
