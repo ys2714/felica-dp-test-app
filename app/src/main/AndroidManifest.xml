@@ -23,7 +23,6 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <!--
             <intent-filter>
                 <action android:name="android.nfc.action.TECH_DISCOVERED" />
@@ -38,14 +37,22 @@
         <activity
             android:name=".FelicaActivity"
             android:exported="true"
+            android:permission="android.permission.DISPATCH_NFC_MESSAGE"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.FelicaDPTest">
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED"/>
+            </intent-filter>
         </activity>
         <activity
             android:name=".JPDLActivity"
             android:exported="true"
+            android:permission="android.permission.DISPATCH_NFC_MESSAGE"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.FelicaDPTest">
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED"/>
+            </intent-filter>
         </activity>
     </application>
 
